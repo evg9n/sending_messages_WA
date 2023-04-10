@@ -7,10 +7,10 @@
 рекомендуется перед рассылкой запустить функцию и получиться xpath от поля ввода и кнопки отправить в открытом окне selenium
 
 **Для Linux нужно применить чтобы работал метод copy от pyperclip:**
-```
-sudo apt-get install xclip
-sudo apt-get install xsel
-```
+
+`sudo apt-get install xclip`
+
+`sudo apt-get install xsel`
 
 ### Принимает следующие параметры:
 + list_number: список с полными номерами, например +79874561230
