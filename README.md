@@ -1,12 +1,10 @@
 <h1 style="text-align: center">Рассылка сообщений в WhatsApp Web</h1>
 
-<h3 style="text-align: center">Описание</h3>
-
 Функция **sending_messages_wa** предназначена для рассылки в WhatsApp WEB
 
 **Рекомендуется перед рассылкой запустить функцию и получиться xpath от поля ввода и кнопки "Отправить" в открытом окне selenium**
 
-**Для Linux нужно применить чтобы работал метод copy от pyperclip:**
+**Для Linux нужно установить xclip и xsel, чтобы работал метод copy от pyperclip:**
 
 `sudo apt-get install xclip`
 
