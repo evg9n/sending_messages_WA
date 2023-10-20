@@ -13,7 +13,7 @@
 ### Принимает следующие параметры:
 + list_number: список с полными номерами, например +79874561230
 + message: текст рассылаемого сообщения
-+ path_webdriver: путь к [ChromeDriver](#https://chromedriver.chromium.org/downloads)
++ path_webdriver: путь к ( скачать можно по ссылки https://chromedriver.chromium.org/downloads)
 + path_profile: путь где будет храниться сессия 
 + xpath_field_input: xpath на поле ввода
 + xpath_button: xpath на кнопку "Отправить"
