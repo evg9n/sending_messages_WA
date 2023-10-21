@@ -78,7 +78,7 @@ def sending_messages_wa(list_number: list, message: str, path_webdriver: str, pa
 
     options = webdriver.ChromeOptions()
     options.add_argument(fr'--user-data-dir={path_profile}')
-    with webdriver.Chrome(executable_path=join('chromedriver-linux64', 'chromedriver'), options=options) as driver:
+    with webdriver.Chrome(executable_path=path_webdriver, options=options) as driver:
         driver.get(r"https://web.whatsapp.com")
         input('GO?(жми ENTER)')
         log.debug('GO')
