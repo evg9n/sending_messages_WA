@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.chrome.service import Service
 from pyperclip import copy
 from logging import getLogger, config, DEBUG
 from dotenv import load_dotenv
@@ -78,7 +79,8 @@ def sending_messages_wa(list_number: list, message: str, path_webdriver: str, pa
 
     options = webdriver.ChromeOptions()
     options.add_argument(fr'--user-data-dir={path_profile}')
-    with webdriver.Chrome(executable_path=path_webdriver, options=options) as driver:
+    service = Service(executable_path=path_webdriver)
+    with webdriver.Chrome(service=service, options=options) as driver:
         driver.get(r"https://web.whatsapp.com")
         input('GO?(жми ENTER)')
         log.debug('GO')
