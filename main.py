@@ -5,8 +5,19 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from pyperclip import copy
 from logging import getLogger, config, DEBUG
+from dotenv import load_dotenv
 
-from config import *
+from os.path import abspath, join
+from os import environ
+
+load_dotenv(abspath(join('.env')))
+
+LIST_NUMBERS = environ.get('list_number').split(', ')
+PATH_WEBDRIVER = environ.get('path_webdriver')
+XPATH_BUTTON = environ.get('xpath_button')
+MESSAGE = environ.get('message')
+XPATH_FIELD_INPUT_WIN = environ.get('xpath_field_input')
+PATH_PROFILE_MY = 'profile'
 
 FORMAT = "%(levelname)-8s [%(asctime)s] %(message)s"
 datefmt = '%d.%m.%y %H:%M:%S'
@@ -67,8 +78,8 @@ def sending_messages_wa(list_number: list, message: str, path_webdriver: str, pa
 
     options = webdriver.ChromeOptions()
     options.add_argument(fr'--user-data-dir={path_profile}')
-    with webdriver.Chrome(executable_path=path_webdriver, options=options) as driver:
-        driver.get("https://web.whatsapp.com")
+    with webdriver.Chrome(executable_path=join('chromedriver-linux64', 'chromedriver'), options=options) as driver:
+        driver.get(r"https://web.whatsapp.com")
         input('GO?(жми ENTER)')
         log.debug('GO')
 

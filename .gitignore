@@ -132,3 +132,6 @@ dmypy.json
 # Other
 config.py
 chromedriver_win32/
+chromedriver-linux64/
+profile/*
+!profile/.gitkeep

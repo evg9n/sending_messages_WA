@@ -6,6 +6,9 @@
 
 **Для Linux нужно установить xclip и xsel, чтобы работал метод copy от pyperclip:**
 
+`sudo apt-get update`
+`sudo apt install python3-pyperclip`
+
 `sudo apt-get install xclip`
 
 `sudo apt-get install xsel`
@@ -14,6 +17,5 @@
 + list_number: список с полными номерами, например +79874561230
 + message: текст рассылаемого сообщения
 + path_webdriver: путь к ( скачать можно по ссылки https://chromedriver.chromium.org/downloads)
-+ path_profile: путь где будет храниться сессия 
 + xpath_field_input: xpath на поле ввода
 + xpath_button: xpath на кнопку "Отправить"
